@@ -1,5 +1,7 @@
 {
   "name": "HotUpdate",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

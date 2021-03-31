@@ -1,20 +1,24 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Blank
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-button color="primary" (click)="print()">Modern Beauty 2021-03-31 14:51 pm</ion-button>
+    <br>
+    <ion-note color="primary">@Ionic-Native / AppVersion</ion-note>
+    <br>
+    <ion-note color="secondary">appInfo.appName = {{appInfo.appName}} </ion-note>
+    <br>
+    <ion-note color="primary">appInfo.packageName = {{appInfo.packageName}} </ion-note>
+    <br>
+    <ion-note color="primary">appInfo.versionCode = {{appInfo.versionCode}} </ion-note>
+    <br>
+    <ion-note color="primary">appInfo.versionNumber = {{appInfo.versionNumber}} </ion-note>
+    <br>
+    <br>
+    <ion-note color="primary">{{appInfo | json}}</ion-note>
 </ion-content>
