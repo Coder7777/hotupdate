@@ -40,6 +40,7 @@
         "code-push": "^3.0.1",
         "codelyzer": "^6.0.0",
         "cordova-android": "^9.0.0",
+        "cordova-ios": "^6.2.0",
         "cordova-plugin-advanced-http": "^3.1.0",
         "cordova-plugin-app-version": "^0.1.12",
         "cordova-plugin-appcenter-analytics": "^0.5.1",
@@ -80,12 +81,13 @@
             },
             "cordova-plugin-ionic-keyboard": {},
             "cordova-plugin-code-push": {},
+            "cordova-plugin-app-version": {},
             "cordova-plugin-appcenter-analytics": {},
-            "cordova-plugin-appcenter-crashes": {},
-            "cordova-plugin-app-version": {}
+            "cordova-plugin-appcenter-crashes": {}
         },
         "platforms": [
-            "android"
+            "android",
+            "ios"
         ]
     }
 }

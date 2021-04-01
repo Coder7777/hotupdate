@@ -14,7 +14,7 @@ export class AppComponent {
         private codePush: CodePush,
     ) {
 
-        // this.initializeApp();
+        this.initializeApp();
     }
 
     initializeApp() {
