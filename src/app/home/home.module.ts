@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { AppVersion } from '@ionic-native/app-version/ngx';
+import { Device } from '@ionic-native/device/ngx';
 
 
 @NgModule({
@@ -14,6 +16,7 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+    providers: [AppVersion, Device],
+    declarations: [HomePage]
 })
 export class HomePageModule {}

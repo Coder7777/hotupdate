@@ -7,18 +7,21 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-    <ion-button color="primary" (click)="print()">Modern Beauty 2021-04-01 09:22 pm</ion-button>
+    <ion-button color="primary" (click)="print()">Hello Modern Beauty</ion-button>
     <br>
     <ion-note color="primary">@Ionic-Native / AppVersion</ion-note>
     <br>
     <ion-note color="secondary">appInfo.appName = {{appInfo.appName}} </ion-note>
     <br>
-    <ion-note color="primary">appInfo.packageName = {{appInfo.packageName}} </ion-note>
+    <ion-note color="danger">appInfo.packageName = {{appInfo.packageName}} </ion-note>
     <br>
-    <ion-note color="primary">appInfo.versionCode = {{appInfo.versionCode}} </ion-note>
+    <ion-note color="warning">appInfo.versionCode = {{appInfo.versionCode}} </ion-note>
     <br>
     <ion-note color="primary">appInfo.versionNumber = {{appInfo.versionNumber}} </ion-note>
     <br>
     <br>
     <ion-note color="primary">{{appInfo | json}}</ion-note>
+
+    <ion-note color="primary">device information = {{deviceInfo | json}} </ion-note>
+
 </ion-content>

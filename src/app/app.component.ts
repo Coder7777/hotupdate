@@ -14,10 +14,10 @@ export class AppComponent {
         private codePush: CodePush,
     ) {
 
-        this.initializeApp();
+        // this.initializeApp();
     }
 
-    initializeApp() {
+    initializeApp() { 
         this.platform.ready().then(() => {
             this.checkCodePush();
         });
@@ -25,19 +25,19 @@ export class AppComponent {
     // 检查热更新
     checkCodePush() {
         this.codePush.sync({
-            installMode: InstallMode.ON_NEXT_RESUME,
+            installMode: InstallMode.IMMEDIATE,
             updateDialog: {
-                mandatoryUpdateMessage: "必须更新后才能使用",
-                mandatoryContinueButtonLabel: "立即更新",
-                optionalInstallButtonLabel: "立即更新",
-                optionalIgnoreButtonLabel: "下次再说",
-                optionalUpdateMessage: "是否马上更新？",
-                updateTitle: "发现新版本",
+                mandatoryUpdateMessage: "Force Update",
+                mandatoryContinueButtonLabel: "Update Now",
+                optionalInstallButtonLabel: "Update Now",
+                optionalIgnoreButtonLabel: "Skip",
+                optionalUpdateMessage: "Update Now？",
+                updateTitle: "New Version Detective",
             }
         }).subscribe((syncStatus) => {
             if (syncStatus == 7) {
-                alert('更新中，请不要退出应用')
+                alert('Do not close app, updating')
             }
-        }, err => { alert('错误' + err); });
+        }, err => { alert('Error' + err); });
     }
 }

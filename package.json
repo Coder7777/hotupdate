@@ -22,6 +22,7 @@
         "@ionic-native/app-version": "^5.31.1",
         "@ionic-native/code-push": "^5.31.1",
         "@ionic-native/core": "^5.31.1",
+        "@ionic-native/device": "^5.31.1",
         "@ionic/angular": "^5.5.2",
         "rxjs": "~6.6.0",
         "tslib": "^2.0.0",
