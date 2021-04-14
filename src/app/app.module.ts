@@ -14,7 +14,7 @@ import { Device } from '@ionic-native/device/ngx';
     declarations: [AppComponent],
     entryComponents: [],
     imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-    providers: [AppVersion, CodePush, Device, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+    providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
     bootstrap: [AppComponent],
 })
 export class AppModule { }

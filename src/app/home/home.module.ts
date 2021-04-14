@@ -7,16 +7,17 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { AppVersion } from '@ionic-native/app-version/ngx';
 import { Device } from '@ionic-native/device/ngx';
+import { CodePush } from '@ionic-native/code-push/ngx';
 
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    HomePageRoutingModule
-  ],
-    providers: [AppVersion, Device],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        HomePageRoutingModule
+    ],
+    providers: [AppVersion, Device, CodePush],
     declarations: [HomePage]
 })
-export class HomePageModule {}
+export class HomePageModule { }

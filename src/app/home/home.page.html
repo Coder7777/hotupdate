@@ -1,12 +1,12 @@
-<ion-header [translucent]="true">
+<ion-header>
     <ion-toolbar>
         <ion-title>
-            Blank
+            HotUpdate 36
         </ion-title>
     </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content>
     <ion-button color="primary" (click)="print()">Hello Modern Beauty</ion-button>
     <br>
     <ion-note color="primary">@Ionic-Native / AppVersion</ion-note>
@@ -23,5 +23,39 @@
     <ion-note color="primary">{{appInfo | json}}</ion-note>
 
     <ion-note color="primary">device information = {{deviceInfo | json}} </ion-note>
+
+    <ion-item>
+        <ion-label>
+            Current Version {{curPackage?.appVersion}}, AppCenter Version {{curPackage?.label}}
+        </ion-label>
+    </ion-item>
+
+    <ion-item>
+        <ion-textarea [(ngModel)]="codePushResponse" placeholder="Enter more information here..."></ion-textarea>
+    </ion-item>
+
+    <ion-button (click)="checkForUpdate()" expand="block" shape="round" color="success">
+        checkForUpdate【Success】
+    </ion-button>
+
+    <ion-button (click)="getCurrentPackage()" expand="block" shape="round" color="success">
+        getCurrentPackage【Success】
+    </ion-button>
+
+    <ion-button (click)="getPendingPackage()" expand="block" shape="round" color="success">
+        getPendingPackage
+    </ion-button>
+
+    <ion-button (click)="notifyApplicationReady()" expand="block" shape="round" color="success">
+        notifyApplicationReady
+    </ion-button>
+
+    <ion-button (click)="restartApplication()" expand="block" shape="round" color="success">
+        restartApplication
+    </ion-button>
+
+    <ion-button (click)="sync()" expand="block" shape="round" color="success">
+        sync【success】
+    </ion-button>
 
 </ion-content>
